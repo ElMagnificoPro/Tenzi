@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Huninn&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Huninn", sans-serif;
+  src: url(./assets/Huninn-Regular.ttf) format("truetype");
+}
+
+@theme {
+  --animate-bounce-short: bounce 0.5s ease-in-out 0.5;
+}
+
+body {
+  font-family: "Huninn";
+  @apply bg-sky-300;
+}
+
+.main-container {
+  @apply bg-gray-200 rounded-xl m-10 p-10 flex flex-col justify-center items-center;
+}
+
+.title {
+  @apply text-center  mb-5 font-bold;
+}
+.title h1 {
+  @apply text-4xl mb-5;
+}
+
+.title p {
+  @apply text-xl;
+}
+
+.dice-container {
+  @apply grid sm:grid-cols-5 grid-cols-2  justify-items-center items-center  mb-10;
+}
+
+.die {
+  /*   filter: drop-shadow(0 0px 5px rgb(136, 0, 0));
+ */
+  @apply flex  w-15 h-15 m-10 justify-center items-center cursor-pointer animate-bounce-short;
+}
+
+.die.is-fixed {
+  /*   filter: drop-shadow(0 0px 5px rgb(0, 136, 0));
+ */
+}
+
+.die img {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(53%) saturate(7500%)
+    hue-rotate(343deg) brightness(104%) contrast(93%);
+  @apply m-0 p-0;
+}
+
+.is-fixed img {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(39%) saturate(3098%)
+    hue-rotate(50deg) brightness(105%) contrast(89%);
+}
+
+.roll-button {
+  @apply bg-sky-700;
+}
+
+.roll-button img {
+  filter: invert(1);
+}
