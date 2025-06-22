@@ -12,7 +12,11 @@
 
 body {
   font-family: "Huninn";
-  @apply bg-sky-300;
+  @apply bg-sky-300 flex justify-center;
+}
+
+#root {
+  max-width: 750px;
 }
 
 .main-container {
