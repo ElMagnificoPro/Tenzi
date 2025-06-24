@@ -35,13 +35,16 @@ body {
 }
 
 .dice-container {
-  @apply grid sm:grid-cols-5 grid-cols-2  justify-items-center items-center  mb-10;
+  @apply grid sm:grid-cols-5 grid-cols-3  justify-items-center items-center  mb-10;
+}
+.dice-container > :last-child{
+  @apply col-end-3 sm:col-end-auto; 
 }
 
 .die {
   /*   filter: drop-shadow(0 0px 5px rgb(136, 0, 0));
  */
-  @apply flex  w-15 h-15 m-10 justify-center items-center cursor-pointer animate-bounce-short;
+  @apply flex  w-15 h-15 sm:m-10 m-5 justify-center items-center cursor-pointer animate-bounce-short;
 }
 
 .die.is-fixed {
